@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="taixiu.css">
+    
+    <script type="text/javascript">
+        var hinh = new Array("1.png", "2.png", "3.png", "4.png", "5.png", "6.png");
+        var hinhTaiXiu = new Array("tai.png","xiu.png");
+
+
+
+  
+
+        
+        // var x = new Array(a, b)
+        //  var b =  Math.floor(Math.random() * 6) + 1;
+        //  var a =  Math.floor(Math.random() * 6) + 1;
+
+        function lac() {
+            //var x = new Array(a, b)
+            var b = Math.floor(Math.random() * 6) + 1;
+            var a = Math.floor(Math.random() * 6) + 1;
+            //var hinhTaiXiu = new Array("tai.png","xiu.png");
+            //var tong = a + b;
+           // var so = new Array("Tài", "Xỉu");
+           
+            // if(tong %2 == 0 ){
+            //   alert("Tài");
+            //  }else{
+            //   alert("Xỉu");
+            // }
+
+            lac1(a);
+            lac2(b);
+            taixiu(a,b);
+            // alert(+a + "\n" + b + "\n" );
+           
+
+            //so(tong);
+
+
+
+
+
+
+
+
+            function lac1() {
+
+                if (a == 1) {
+                    // e = "1.png";
+                    showhinh("images/" + hinh[0]);
+                } else if (a == 2) {
+                    //e = "2.png";
+                    showhinh("images/" + hinh[1]);
+                } else if (a == 3) {
+                    //e = "3.png";
+                    showhinh("images/" + hinh[2]);
+                }
+                else if (a == 4) {
+                    //e = "4.png";
+                    showhinh("images/" + hinh[3]);
+                }
+                else if (a == 5) {
+                    //e = "5.png";
+                    showhinh("images/" + hinh[4]);
+                }
+                else if (a == 6) {
+                    //e = "6.png";
+                    showhinh("images/" + hinh[5]);
+                }
+
+
+            }
+            function lac2() {
+                //var hinh = new Array("1.png","2.png","3.png","4.png","5.png","6.png");
+
+
+
+                if (b == 1) {
+                    // e = "1.png";
+                    showhinh2("images/" + hinh[0]);
+                } else if (b == 2) {
+                    //e = "2.png";
+                    showhinh2("images/" + hinh[1]);
+                } else if (b == 3) {
+                    //e = "3.png";
+                    showhinh2("images/" + hinh[2]);
+                }
+                else if (b == 4) {
+                    //e = "4.png";
+                    showhinh2("images/" + hinh[3]);
+                }
+                else if (b == 5) {
+                    //e = "5.png";
+                    showhinh2("images/" + hinh[4]);
+                }
+                else if (b == 6) {
+                    //e = "5.png";
+                    showhinh2("images/" + hinh[5]);
+                }
+                else if (b == 2) {
+                    //e = "6.png";
+                    showhinh2("images/" + hinh[5]);
+                }
+                else if (b == 2) {
+                    //e = "6.png";
+                    showhinh2("images/" + hinh[6]);
+                }
+
+                //let holder = document.getElementById('holder')
+               // holder.innerHTML = e;
+
+            }
+            function taixiu(a,b) {
+                var tong = a+b;
+                //var hinhTaiXiu = new Array("tai.png","xiu.png");
+                if (tong %2 == 0) {
+                    showhinh3("images/" + hinhTaiXiu[0]);
+                }
+                else {
+                    showhinh3("images/" + hinhTaiXiu[1]);;
+                }
+            }
+
+
+            function showhinh(duongdan) {
+
+                document.getElementById("view1").src = duongdan;
+            }
+            function showhinh2(duongdan) {
+
+                document.getElementById("view2").src = duongdan;
+            }
+            function showhinh3(duongdan) {
+
+                document.getElementById("view3").src = duongdan;
+            }
+
+
+        }
+    
+
+
+
+
+
+
+
+
+       // alert(+a + "\n" + b + "\n" + c + "\n");
+
+    </script>
+</head>
+
+<body>
+    <marquee behavior="" direction="left">
+        <p style="color: red;font-size: 40px;"> CỜ BẠC NGƯỜI CHƠI LÀ NGƯỜI SẼ THẮNG, NGƯỜI KHÔNG CHƠI THÌ SAO MÀ THẮNG!!</p>
+    </marquee>
+
+    <h1> MỜI BẠN XÓC ĐĨA 😘😘</h1>
+    <div class="images"><img src="/images/Arrow-down.gif" alt=""></div>
+  
+
+    <div class="center">
+
+
+        <button class="button" onclick="lac();">XÓC ĐĨA </button>
+        <div class="View">
+
+
+            <div class="taixiu1"><iframe id="view1" src="" frameborder="0" style="width: 200px;height: 200px;"></iframe>
+            </div>
+            <div class="taixiu2"><iframe id="view2" src="" frameborder="0" style="width: 200px;height: 200px;"></iframe>
+                
+            </div>
+
+
+        </div>
+       
+           
+            
+        
+        <div class="hienthi">
+            
+                <div class="taixiu3"><iframe id="view3" src="" frameborder="0" style="width: 200px;height: 200px;"></iframe></div>
+                
+            
+        </div>
+    </div>
+
+
+</body>
+
+</html>
